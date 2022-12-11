@@ -1,0 +1,219 @@
+/*==========Question 1============*/
+[
+   {
+   '$match': {
+   'name': new RegExp('Reg')
+   }
+   }, {
+   '$project': {
+   'restaurant_id': 1,
+   'name': 1,
+   'borough': 1,
+   'cuisine': 1
+   }
+   }
+   ]
+/*==============Question 2================*/
+
+   [
+   {
+   '$match': {
+      'borough': 'Bronx'
+    }
+  }, {
+    '$match': {
+   '$or': [
+   {
+   'cuisine': 'American '
+   }, {
+   'cuisine': 'Chinese'
+   }
+   ]
+   }
+   }
+   ]
+/*===================Question 3==================*/
+
+  [
+   {
+   '$match': {
+      '$or': [
+   {
+   'borough': 'Staten Island'
+   }, {
+   'borough': 'Queens'
+   }, {
+   'borough': 'Bronx'
+   }, {
+   'borough': 'Brooklyn'
+   }
+   ]
+   }
+   }, {
+   '$project': {
+   'restaurant_Id': 1,
+   'name': 1,
+   'borough': 1,
+   'cuisine': 1
+   }
+   }
+   ]
+/*===================Question 4==================*/
+
+    [
+   {
+   '$match': {
+      'borough': {
+        '$nin': [
+   'Staten Island', 'Queens', 'Bronx', 'Brooklyn'
+   ]
+   }
+   }
+   }, {
+   '$project': {
+   'restaurant_Id': 1,
+   'name': 1,
+   'borough': 1,
+   'cuisine': 1
+   }
+   }
+   ]
+
+/*===================Question 5==================*/
+   [
+   {
+   '$match': {
+   'grades.score': {
+   '$lte': 10
+   }
+   }
+   }, {
+   '$project': {
+   'restaurant_Id': 1,
+   'name': 1,
+   'borough': 1,
+   'cuisine': 1
+   }
+   }
+   ]
+
+/*===================Question 6==================*/
+   [
+   {
+   '$match': {
+      'name': new RegExp('Wil')
+    }
+  }, {
+    '$match': {
+   '$and': [
+        {
+          'cuisine': {
+            '$ne': 'American '
+   }
+   }, {
+   'cuisine': {
+   '$ne': 'Chinese'
+          }
+        }
+      ]
+    }
+  }, {
+    '$project': {
+   'restaurant_Id': 1,
+   'name': 1,
+   'borough': 1,
+   'cuisine': 1
+   }
+   }
+   ]
+
+/*===================Question 7==================*/
+   [
+   {
+   '$match': {
+   'grades.grade': 'A',
+   'grades.score': 11,
+   'grades.date': new Date('Mon, 11 Aug 2014 00:00:00 GMT')
+   }
+   }, {
+   '$project': {
+   'restaurant_id': 1,
+   'name': 1,
+   'grades': 1
+   }
+   }
+   ]
+
+/*===================Question 8==================*/
+   [
+   {
+   '$match': {
+   'grades.1.grade': 'A',
+   'grades.1.score': 9,
+   'grades.1.date': new Date('Mon, 11 Aug 2014 00:00:00 GMT')
+   }
+   }, {
+   '$project': {
+   'restaurant_id': 1,
+   'name': 1,
+   'grades': 1
+   }
+   }
+   ]
+
+/*===================Question 9==================*/
+   [
+   {
+   '$match': {
+   'address.coord.1': {
+   '$gt': 42,
+   '$lt': 52
+   }
+   }
+   }, {
+   '$project': {
+   'restaurant_id': 1,
+   'name': 1,
+   'address': 1,
+   'coord': 1
+   }
+   }
+   ]
+
+/*===================Question 10==================*/
+   [
+    {
+    '$sort': {
+    'name': 1
+    }
+    }
+    ]
+/*===================Question 11==================*/
+     [
+    {
+    '$sort': {
+    'name': -1
+    }
+    } 
+    ]
+
+/*===================Question 12==================*/
+    [
+    {
+    '$sort': {
+    'cuisine': 1,
+    'borough': -1
+    }
+    }
+    ]
+
+/*===================Question 13==================*/
+    [
+    {
+    '$match': {
+    'address.street': {
+    '$exists': true
+    }
+    }
+    }
+    ]

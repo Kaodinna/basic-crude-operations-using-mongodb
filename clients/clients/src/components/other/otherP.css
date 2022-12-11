@@ -1,0 +1,70 @@
+.eng-containter{
+    /* color: white; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 6rem;
+  }
+
+  .mercy{
+    width: 310px;
+    height: 400px;
+    color: white;
+    font-weight: bolder;
+    opacity: 0.8;
+    border-radius: 12px;
+    margin-top: 2rem;
+     border: none; 
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+      box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); 
+    grid-gap: 1rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+    margin-bottom: 5rem;
+  }
+  .mercy:hover{
+      box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+      transform: scale(1.05, 1.05);
+      opacity: 2;
+  }
+
+  .texes{
+    margin-top: -7rem;
+    margin-left: 2rem;
+color: #198754;
+}
+.texe{
+    margin-top:-9rem;
+    margin-left: 2rem;
+color: #198754;
+}
+.texess{
+    margin-top: -9rem;
+    margin-left: 2rem;
+color: #198754;
+}
+
+.texesss{
+    margin-top: -7rem;
+    margin-left: 2rem;
+color: #198754;
+}
+  .about-h{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #00889a;
+  }
+
+  .subhead{
+    color: #198754;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    font-size: 1.5rem;
+  }
+  .otherP{
+    width: 300px;
+    height: 400px;
+  } 

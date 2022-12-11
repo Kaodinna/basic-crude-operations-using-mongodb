@@ -1,0 +1,84 @@
+.homepage{
+    margin-top: 3rem;
+}
+.homepage-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+}
+.home-h1{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+    font-weight: bolder;
+    color: #198754;
+}
+
+.home-h2{
+    font-size: 3rem;
+    color: #198754;
+    font-weight: bolder;
+    padding-left: 5rem;
+}
+.h2-s{
+    padding-left: 4rem;
+}
+.home-p{
+    color: gray;
+    font-size: 1.3rem;
+}
+.homepage-text{
+padding-top: 10rem;
+    padding-left: 5rem;
+}
+
+.firstbody-img{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+padding-right: 1rem;
+}
+.first{
+    margin-top: 5rem;
+    /* padding-right: 2rem; */
+}
+img{
+    border-radius: 10px;
+}
+.bodylog-btn {
+    font-weight: bolder;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    margin-left: 0.5rem;
+    background-color:#198754 ;
+
+  }
+  .bodyLog{
+    padding-top: 2rem;
+    padding-left: 7rem;
+  }
+
+  .firs{
+    padding-top:2rem ;
+    padding-right: .70rem;
+    border-radius: 10px;
+    padding-left: .70rem;
+    width: 300px;
+    height: 200px;
+  }
+
+.gucci{
+    width: 200px;
+    border-radius: 10px;
+}
+/* 
+.fir{
+    margin-right: 2rem;
+}
+   */
