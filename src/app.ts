@@ -19,10 +19,6 @@ mongoose
     console.log("error");
   });
 
-// mongoose.connect("mongodb://localhost/movie_Store", () => {
-//   console.log("Database connected");
-// });
-
 // view engine setup
 
 app.use(cors());
@@ -48,19 +44,5 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
   // render the error page
   res.status(err.status || 500);
 });
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, "uploads");
-//   },
-//   filename: function (req, file, cb) {
-//     cb(
-//       null,
-//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-//     );
-//   },
-// });
-// const upload = multer({
-//   storage: storage,
-// });
 
 export default app;

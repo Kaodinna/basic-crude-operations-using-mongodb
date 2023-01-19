@@ -21,12 +21,7 @@ mongoose_1.default
     .catch((error) => {
     console.log("error");
 });
-// mongoose.connect("mongodb://localhost/movie_Store", () => {
-//   console.log("Database connected");
-// });
 // view engine setup
-app.set("views", path_1.default.join(__dirname, "views"));
-app.set("view engine", "ejs");
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.json());
@@ -46,20 +41,5 @@ app.use(function (err, req, res, next) {
     res.locals.error = req.app.get("env") === "development" ? err : {};
     // render the error page
     res.status(err.status || 500);
-    res.render("error");
 });
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, "uploads");
-//   },
-//   filename: function (req, file, cb) {
-//     cb(
-//       null,
-//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-//     );
-//   },
-// });
-// const upload = multer({
-//   storage: storage,
-// });
 exports.default = app;
