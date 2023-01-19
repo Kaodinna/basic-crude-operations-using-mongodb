@@ -24,8 +24,6 @@ mongoose
 // });
 
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
 
 app.use(cors());
 app.use(logger("dev"));
@@ -49,7 +47,6 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error");
 });
 // const storage = multer.diskStorage({
 //   destination: function (req, file, cb) {
